@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		500F5B8D201C7B7500B78822 /* LoopingAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500F5B83201C7B7500B78822 /* LoopingAnimation.framework */; };
-		500F5B92201C7B7500B78822 /* LoopingAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F5B91201C7B7500B78822 /* LoopingAnimationTests.swift */; };
 		500F5B94201C7B7500B78822 /* LoopingAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 500F5B86201C7B7500B78822 /* LoopingAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		500F5B9E201C7B8100B78822 /* SmoothAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F5B9D201C7B8100B78822 /* SmoothAnimation.swift */; };
+		500F5BA0201C7BAA00B78822 /* AnimationLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F5B9F201C7BAA00B78822 /* AnimationLoop.swift */; };
+		500F5BA2201C7BBD00B78822 /* ValueAnimationLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F5BA1201C7BBD00B78822 /* ValueAnimationLoop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +29,10 @@
 		500F5B86201C7B7500B78822 /* LoopingAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoopingAnimation.h; sourceTree = "<group>"; };
 		500F5B87201C7B7500B78822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500F5B8C201C7B7500B78822 /* LoopingAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoopingAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		500F5B91201C7B7500B78822 /* LoopingAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingAnimationTests.swift; sourceTree = "<group>"; };
 		500F5B93201C7B7500B78822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		500F5B9D201C7B8100B78822 /* SmoothAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothAnimation.swift; sourceTree = "<group>"; };
+		500F5B9F201C7BAA00B78822 /* AnimationLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationLoop.swift; sourceTree = "<group>"; };
+		500F5BA1201C7BBD00B78822 /* ValueAnimationLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueAnimationLoop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				500F5B86201C7B7500B78822 /* LoopingAnimation.h */,
+				500F5B9D201C7B8100B78822 /* SmoothAnimation.swift */,
+				500F5B9F201C7BAA00B78822 /* AnimationLoop.swift */,
+				500F5BA1201C7BBD00B78822 /* ValueAnimationLoop.swift */,
 				500F5B87201C7B7500B78822 /* Info.plist */,
 			);
 			path = LoopingAnimation;
@@ -80,7 +87,6 @@
 		500F5B90201C7B7500B78822 /* LoopingAnimationTests */ = {
 			isa = PBXGroup;
 			children = (
-				500F5B91201C7B7500B78822 /* LoopingAnimationTests.swift */,
 				500F5B93201C7B7500B78822 /* Info.plist */,
 			);
 			path = LoopingAnimationTests;
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					500F5B82201C7B7500B78822 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					500F5B8B201C7B7500B78822 = {
@@ -196,6 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500F5BA2201C7BBD00B78822 /* ValueAnimationLoop.swift in Sources */,
+				500F5BA0201C7BAA00B78822 /* AnimationLoop.swift in Sources */,
+				500F5B9E201C7B8100B78822 /* SmoothAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +213,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				500F5B92201C7B7500B78822 /* LoopingAnimationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +342,7 @@
 		500F5B98201C7B7500B78822 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -348,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.christiantietze.LoopingAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -355,6 +366,7 @@
 		500F5B99201C7B7500B78822 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -377,6 +389,7 @@
 		500F5B9B201C7B7500B78822 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FRMDA3XRGC;
@@ -391,6 +404,7 @@
 		500F5B9C201C7B7500B78822 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FRMDA3XRGC;
