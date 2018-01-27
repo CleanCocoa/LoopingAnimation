@@ -35,15 +35,19 @@ public class AnimationLoop: NSObject, NSAnimationDelegate {
     /// - parameter increaseCurve: Animation curve of increase animations.
     /// - parameter decreaseDuration: Time the decreaste animations will take.
     /// - parameter decreaseCurve: Animation curve of decrease animations.
+    /// - parameter initialOperation: Which animation loop operation to start with. Defaults to `.increment`.
     public convenience init(
         increaseDuration: TimeInterval,
         increaseCurve: NSAnimation.Curve,
         decreaseDuration: TimeInterval,
-        decreaseCurve: NSAnimation.Curve) {
+        decreaseCurve: NSAnimation.Curve,
+        startWith initialOperation: Operation = .increment) {
 
-        self.init(configuration: LoopConfiguration(
-            increase: .init(duration: increaseDuration, animationCurve: increaseCurve),
-            decrease: .init(duration: decreaseDuration, animationCurve: decreaseCurve)))
+        self.init(
+            configuration: LoopConfiguration(
+                increase: .init(duration: increaseDuration, animationCurve: increaseCurve),
+                decrease: .init(duration: decreaseDuration, animationCurve: decreaseCurve)),
+            startWith: initialOperation)
     }
 
     /// Sets up a loop of 2 animations with increase and decrease both

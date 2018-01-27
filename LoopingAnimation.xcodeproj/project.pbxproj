@@ -12,6 +12,11 @@
 		500F5B9E201C7B8100B78822 /* SmoothAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F5B9D201C7B8100B78822 /* SmoothAnimation.swift */; };
 		500F5BA0201C7BAA00B78822 /* AnimationLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F5B9F201C7BAA00B78822 /* AnimationLoop.swift */; };
 		500F5BA2201C7BBD00B78822 /* ValueAnimationLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F5BA1201C7BBD00B78822 /* ValueAnimationLoop.swift */; };
+		500F5BAA201C7BFF00B78822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F5BA9201C7BFF00B78822 /* AppDelegate.swift */; };
+		500F5BAC201C7BFF00B78822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500F5BAB201C7BFF00B78822 /* Assets.xcassets */; };
+		500F5BAF201C7BFF00B78822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 500F5BAD201C7BFF00B78822 /* MainMenu.xib */; };
+		500F5BB5201C7D0C00B78822 /* LoopingAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500F5B83201C7B7500B78822 /* LoopingAnimation.framework */; };
+		500F5BB6201C7D0C00B78822 /* LoopingAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 500F5B83201C7B7500B78822 /* LoopingAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +27,28 @@
 			remoteGlobalIDString = 500F5B82201C7B7500B78822;
 			remoteInfo = LoopingAnimation;
 		};
+		500F5BB7201C7D0C00B78822 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500F5B7A201C7B7500B78822 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 500F5B82201C7B7500B78822;
+			remoteInfo = LoopingAnimation;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		500F5BB9201C7D0C00B78822 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				500F5BB6201C7D0C00B78822 /* LoopingAnimation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		500F5B83201C7B7500B78822 /* LoopingAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoopingAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +59,12 @@
 		500F5B9D201C7B8100B78822 /* SmoothAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothAnimation.swift; sourceTree = "<group>"; };
 		500F5B9F201C7BAA00B78822 /* AnimationLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationLoop.swift; sourceTree = "<group>"; };
 		500F5BA1201C7BBD00B78822 /* ValueAnimationLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueAnimationLoop.swift; sourceTree = "<group>"; };
+		500F5BA7201C7BFF00B78822 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		500F5BA9201C7BFF00B78822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		500F5BAB201C7BFF00B78822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		500F5BAE201C7BFF00B78822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		500F5BB0201C7BFF00B78822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		500F5BB1201C7BFF00B78822 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +83,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		500F5BA4201C7BFF00B78822 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500F5BB5201C7D0C00B78822 /* LoopingAnimation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -59,6 +99,7 @@
 			children = (
 				500F5B85201C7B7500B78822 /* LoopingAnimation */,
 				500F5B90201C7B7500B78822 /* LoopingAnimationTests */,
+				500F5BA8201C7BFF00B78822 /* Example */,
 				500F5B84201C7B7500B78822 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +109,7 @@
 			children = (
 				500F5B83201C7B7500B78822 /* LoopingAnimation.framework */,
 				500F5B8C201C7B7500B78822 /* LoopingAnimationTests.xctest */,
+				500F5BA7201C7BFF00B78822 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +132,18 @@
 				500F5B93201C7B7500B78822 /* Info.plist */,
 			);
 			path = LoopingAnimationTests;
+			sourceTree = "<group>";
+		};
+		500F5BA8201C7BFF00B78822 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				500F5BA9201C7BFF00B78822 /* AppDelegate.swift */,
+				500F5BAB201C7BFF00B78822 /* Assets.xcassets */,
+				500F5BAD201C7BFF00B78822 /* MainMenu.xib */,
+				500F5BB0201C7BFF00B78822 /* Info.plist */,
+				500F5BB1201C7BFF00B78822 /* Example.entitlements */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +196,25 @@
 			productReference = 500F5B8C201C7B7500B78822 /* LoopingAnimationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		500F5BA6201C7BFF00B78822 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 500F5BB2201C7BFF00B78822 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				500F5BA3201C7BFF00B78822 /* Sources */,
+				500F5BA4201C7BFF00B78822 /* Frameworks */,
+				500F5BA5201C7BFF00B78822 /* Resources */,
+				500F5BB9201C7D0C00B78822 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				500F5BB8201C7D0C00B78822 /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = 500F5BA7201C7BFF00B78822 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,6 +234,10 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					500F5BA6201C7BFF00B78822 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 500F5B7D201C7B7500B78822 /* Build configuration list for PBXProject "LoopingAnimation" */;
@@ -169,6 +246,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 500F5B79201C7B7500B78822;
 			productRefGroup = 500F5B84201C7B7500B78822 /* Products */;
@@ -177,6 +255,7 @@
 			targets = (
 				500F5B82201C7B7500B78822 /* LoopingAnimation */,
 				500F5B8B201C7B7500B78822 /* LoopingAnimationTests */,
+				500F5BA6201C7BFF00B78822 /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -193,6 +272,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		500F5BA5201C7BFF00B78822 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500F5BAC201C7BFF00B78822 /* Assets.xcassets in Resources */,
+				500F5BAF201C7BFF00B78822 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +304,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		500F5BA3201C7BFF00B78822 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500F5BAA201C7BFF00B78822 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -224,7 +320,23 @@
 			target = 500F5B82201C7B7500B78822 /* LoopingAnimation */;
 			targetProxy = 500F5B8E201C7B7500B78822 /* PBXContainerItemProxy */;
 		};
+		500F5BB8201C7D0C00B78822 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 500F5B82201C7B7500B78822 /* LoopingAnimation */;
+			targetProxy = 500F5BB7201C7D0C00B78822 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		500F5BAD201C7BFF00B78822 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				500F5BAE201C7BFF00B78822 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		500F5B95201C7B7500B78822 /* Debug */ = {
@@ -347,7 +459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FRMDA3XRGC;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -371,7 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FRMDA3XRGC;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -416,6 +528,44 @@
 			};
 			name = Release;
 		};
+		500F5BB3201C7BFF00B78822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FRMDA3XRGC;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.christiantietze.LoopingAnimation.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		500F5BB4201C7BFF00B78822 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FRMDA3XRGC;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.christiantietze.LoopingAnimation.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -442,6 +592,15 @@
 			buildConfigurations = (
 				500F5B9B201C7B7500B78822 /* Debug */,
 				500F5B9C201C7B7500B78822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		500F5BB2201C7BFF00B78822 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				500F5BB3201C7BFF00B78822 /* Debug */,
+				500F5BB4201C7BFF00B78822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

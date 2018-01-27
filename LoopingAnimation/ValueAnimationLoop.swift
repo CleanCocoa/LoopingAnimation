@@ -17,11 +17,19 @@ public class ValueAnimationLoop {
         self.loop = loop
     }
 
-    public convenience init(value: CGFloat,
-                            increaseDuration: TimeInterval = 1.0,
-                            increaseCurve: NSAnimation.Curve = .easeInOut,
-                            decreaseDuration: TimeInterval = 1.0,
-                            decreaseCurve: NSAnimation.Curve = .easeInOut) {
+    /// - parameter value: The maximum value to loop to, and from which to loop back again to 0.
+    /// - parameter increaseDuration: Time the increase animations will take.
+    /// - parameter increaseCurve: Animation curve of increase animations.
+    /// - parameter decreaseDuration: Time the decreaste animations will take.
+    /// - parameter decreaseCurve: Animation curve of decrease animations.
+    /// - parameter initialOperation: Which animation loop operation to start with. Defaults to `.increment`.
+    public convenience init(
+        value: CGFloat,
+        increaseDuration: TimeInterval = 1.0,
+        increaseCurve: NSAnimation.Curve = .easeInOut,
+        decreaseDuration: TimeInterval = 1.0,
+        decreaseCurve: NSAnimation.Curve = .easeInOut,
+        startWith initialOperation: AnimationLoop.Operation = .increment) {
 
         self.init(
             value: value,
@@ -29,7 +37,8 @@ public class ValueAnimationLoop {
                 increaseDuration: increaseDuration,
                 increaseCurve: increaseCurve,
                 decreaseDuration: decreaseDuration,
-                decreaseCurve: decreaseCurve))
+                decreaseCurve: decreaseCurve,
+                startWith: initialOperation))
 
         self.loop.progressHandler = { [weak self] in self?.loopDidProgress(progress: $0, operation: $1) }
     }
