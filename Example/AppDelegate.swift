@@ -63,10 +63,10 @@ class BreathingView: NSView {
     override func draw(_ dirtyRect: NSRect) {
         let padding = maxPadding - breathingValue
         let circleRect = NSRect(
-            x: dirtyRect.origin.x + padding,
-            y: dirtyRect.origin.y + padding,
-            width: dirtyRect.size.width - 2 * padding,
-            height: dirtyRect.size.height - 2 * padding)
+            x: bounds.origin.x + padding,
+            y: bounds.origin.y + padding,
+            width: bounds.size.width - 2 * padding,
+            height: bounds.size.height - 2 * padding)
         #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1).setFill()
         NSBezierPath(ovalIn: circleRect).fill()
     }
